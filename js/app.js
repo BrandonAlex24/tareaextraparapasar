@@ -1,3 +1,3 @@
 if (navigator.serviceWorker) {
-	navigator.serviceWorker.register("/sw.js");
+	navigator.serviceWorker.register("https://brandonalex24.github.io/tareaextraparapasar/sw.js");
 }
