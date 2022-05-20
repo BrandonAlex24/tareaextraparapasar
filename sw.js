@@ -5,22 +5,22 @@ const Dinamico = "dinamico";
 self.addEventListener("install", event => {
 	const cacheEstatico = caches.open(Estatico).then((cache) => {
 		cache.addAll([
-			"/index.html",
-            "/",
-            "/js/app.js",
-            "/js/numeros.js",
-            "/css/style.css",
-            "/img/26287.png",
-            "/img/error.png",
-            "/pages/error.html",
-            "/sw.js",
+			"/tareaextraparapasar/index.html",
+            "/tareaextraparapasar/",
+            "/tareaextraparapasar/js/app.js",
+            "/tareaextraparapasar/js/numeros.js",
+            "/tareaextraparapasar/css/style.css",
+            "/tareaextraparapasar/img/26287.png",
+            "/tareaextraparapasar/img/error.png",
+            "/tareaextraparapasar/pages/error.html",
+            "/tareaextraparapasar/sw.js",
 		]);
 	});
 
 	const cacheInmutable = caches.open(inmutable).then((cache) => {
 		cache.addAll([
-			"/js/jquery-3.6.0.min.js",
-            "/manifest.json",
+			"/tareaextraparapasar/js/jquery-3.6.0.min.js",
+            "/tareaextraparapasar/manifest.json",
             "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css",
 		]);
 	});
@@ -33,9 +33,9 @@ self.addEventListener("fetch", event => {
             return caches.match(event.request).then(respuesta2 =>{
                 if(!respuesta2){
                     if (/\.(png|jpg)$/.test(event.request.url)) {
-                        return caches.match("/img/error.png");
+                        return caches.match("/tareaextraparapasar/img/error.png");
                     }
-                    return caches.match("/pages/error.html");
+                    return caches.match("/tareaextraparapasar/pages/error.html");
                 }
                 return respuesta2;
             });
@@ -53,9 +53,9 @@ self.addEventListener("fetch", event => {
         return caches.match(event.request).then(respuesta2 =>{
             if(!respuesta2){
                 if (/\.(png|jpg)$/.test(event.request.url)) {
-                    return caches.match("/img/error.png");
+                    return caches.match("/tareaextraparapasar/img/error.png");
                 }
-                return caches.match("/pages/error.html");
+                return caches.match("/tareaextraparapasar/pages/error.html");
             }
             return respuesta2;
         });
