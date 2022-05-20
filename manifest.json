@@ -5,7 +5,7 @@
     "theme_color": "orange",
     "background-color":"black",
     "display": "standalone",
-    "orientation": "landscape",
+    "orientation": "portrait",
     "start_url": "index.html",
     "icons": [{
         "src": "img/icons/96x96.png",
